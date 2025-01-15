@@ -15,7 +15,7 @@ struct Cli {
     #[arg(short, long, help = "The amount of bytes per file append", default_value = "1000000")]
     buf_size: usize,
 
-    #[arg(short, long, help = "The total amount of data to write", default_value = "10000000000")]
+    #[arg(short, long, help = "The total amount of data to write. It might write slightly more data than this due to partial writes.", default_value = "10000000000")]
     total_data: u64,
 
     #[arg(help = "The path to write the big file")]
